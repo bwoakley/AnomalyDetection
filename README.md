@@ -98,7 +98,9 @@ Now that we have chosen our 4 models (Random Forest, XG boost, LOF, and KNN), we
 
 We now display our results. The best performing model is the Random Forest Classifier. We show the Precision and Recall graphs for choices of Threshold.
 
+
 ![image](Misc/PR.jpg)
+<font size= “3”>_**Figure 1**_</font>
 
 The question remains, how to choose the optimal threshold? Notice that the best possible Precision/Recall pair is the point (1,1). This is a fictitious model that has 100% Precision and Recall, but it is something to aim for. Below, we code a for loop that computes the threshold which gives (prec, recall) closest to the point (1,1) :
 
