@@ -22,13 +22,13 @@ Notice that the dataset is very imbalanced. Only 0.17% of transactions are fraud
 
 Indeed, we interpret precision as the percentage of transactions we detect as fraudulent that are actually fraudulent, as determined by the formula:
 
-$' \text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . '$
+$ \text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . $
 
 In other words, if precision is low then the model will flag more transactions as fraudulent that, in reality, are valid. This will result in upset customers falsely accused of fraud.
 
 On the other hand, we interpret recall as the percentage of all the truly fraudulent cases that the model is able to detect, as seen in the formula: 
 
-$' \text{Recall} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Neg} } \, . '$
+$ \text{Recall} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Neg} } \, . $
 
 In other words, if recall is low, then there are fraudulent transactions that our model is just not able to detect.
 
