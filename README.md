@@ -96,7 +96,7 @@ Now that we have chosen our 4 models (Random Forest, XG boost, LOF, and KNN), we
 
 # Results
 
-We now display our results. The best performing model is the Random Forest Classifier. We how the Precision and Recall graphs for choices of Threshold.
+We now display our results. The best performing model is the Random Forest Classifier. We show the Precision and Recall graphs for choices of Threshold.
 
 ![image](Misc/PR.jpg)
 
