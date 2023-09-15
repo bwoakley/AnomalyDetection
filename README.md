@@ -109,7 +109,7 @@ The question remains, how to choose the optimal threshold? Notice that the best 
 ![image](Misc/Curve.jpg)
 <font size= “7”>_**Figure 2**_</font>
 
-We draw a dot at the point with optimal (Recall, Precision) pair, (0.56, 0.53). Below, we code a **for loop** that computes the threshold which gives (recall, prec) closest to the point (1,1) :
+We draw a dot at the point (Recall, Precision) = (0.56, 0.53) that is closest to the point (1,1). This corresponds to the choice of Threshold that gives the (Recall, Precision) pair closest to the ideal model (1,1). Below is the code to compute this pair :
 
 
 	# Compute optimal threshold:
