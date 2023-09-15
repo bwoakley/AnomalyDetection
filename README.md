@@ -22,7 +22,9 @@ Notice that the dataset is very imbalanced. Only 0.17% of transactions are fraud
 
 Indeed, we interpret precision as the percentage of transactions we detect as fraudulent that are actually fraudulent, as determined by the formula:
 
-- <img src="https://latex.codecogs.com/gif.latex?\text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . " /> 
+```math
+\text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . 
+```
 
 $ \text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . $
 
