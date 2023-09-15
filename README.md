@@ -21,10 +21,15 @@ We use the AUC ROC and F1 score as our metrics we wish to maximize (see [this ar
 Notice that the dataset is very imbalanced. Only 0.17% of transactions are fraudulent ('Class' = 1), so a model that predicts every transaction is valid would immediately have an accuracy of 99.83% . Therefore, we care more about precision and recall than we do accuracy. A model with a large AUC ROC will score well in precision and recall for our choice of threshold hyperparameter.
 
 Indeed, we interpret precision as the percentage of transactions we detect as fraudulent that are actually fraudulent, as determined by the formula:
-$$ \text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . $$
+
+$ \text{Precision} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Pos} } \, . $
+
 In other words, if precision is low then the model will flag more transactions as fraudulent that, in reality, are valid. This will result in upset customers falsely accused of fraud.
 
-On the other hand, we interpret recall as the percentage of all the truly fraudulent cases that the model is able to detect, as seen in the formula: $$ \text{Recall} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Neg} } \, . $$
+On the other hand, we interpret recall as the percentage of all the truly fraudulent cases that the model is able to detect, as seen in the formula: 
+
+$ \text{Recall} = \dfrac{ \text{True Pos} }{ \text{True Pos + False Neg} } \, . $
+
 In other words, if recall is low, then there are fraudulent transactions that our model is just not able to detect.
 
 This is the **precision/recall tradeoff**. By lowering the threshold hyperparameter, we will have lower precision but higher recall. The model will be more sensitive to outliers. It will detect more cases of fraud, but result in more upset customers. On the other hand, increasing the threshold hyperparameter will make the model less sensitive. It will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers, but missing some of the borderline fraud cases. A model with high AUC ROC and F1 score will capture the optimal solution to this tradeoff problem, resulting in models that have both a high precision and a high recall. We then will then consider the choice of threshold hyperparameter to find a precision/recall combination that we are happy with.
