@@ -9,6 +9,11 @@ One of the major factors to consider in this project is that most credit card tr
 
 We see that only 0.17% of the transactions are fraudulent. Our dataset is heavily imbalanced and the fraudulent transactions are considered outliers. We will now consider which metrics and models will perform well under these conditions.
 
+# Files
+
+- [ ] choose_models_PyCaret.ipynb : Jupyter Notebook to choose 4 of the best models from those available in the PyCaret API
+- [ ] compare_models_PyCaret.ipynb : Jupyter Notebook to compare the 4 chosen models. Also computes the optimal Threshold Hyperparameter
+
 # Metric Selection
 
 We use the AUC ROC and F1 score as our metrics we wish to maximize (see [this article](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9) for a more detailed explanation on precision/recall tradeoff for imbalanced classes). We will now give a brief explanation for our decision to prioritize these measures.
