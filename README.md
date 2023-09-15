@@ -100,9 +100,16 @@ We now display our results. The best performing model is the Random Forest Class
 
 
 ![image](Misc/PR.jpg)
-<font size= “3”>_**Figure 1**_</font>
+<font size= “10”>_**Figure 1**_</font>
 
-The question remains, how to choose the optimal threshold? Notice that the best possible Precision/Recall pair is the point (1,1). This is a fictitious model that has 100% Precision and Recall, but it is something to aim for. Below, we code a for loop that computes the threshold which gives (prec, recall) closest to the point (1,1) :
+As graphed above in **Figure 1**, we see that as the Threshold value increases, Recall decreases and Precision increases (generally). Increasing the threshold hyperparameter will make the model less sensitive. It will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers (higher Precision), but missing some of the borderline fraud cases (lower Recall).
+
+The question remains, how to choose the optimal threshold? Notice that the best possible Precision/Recall pair is a fictitious model that has 100% Precision and Recall, but it is something to aim for. We plot the values of (Recall, Precision) below in **Figure 2**:
+
+![image](Misc/Curve.jpg)
+<font size= “10”>_**Figure 2**_</font>
+
+We draw a dot at the point with optimal (Recall, Precision) pair, (0.56, 0.53). Below, we code a **for loop** that computes the threshold which gives (recall, prec) closest to the point (1,1) :
 
 
 	# Compute optimal threshold:
@@ -132,9 +139,7 @@ The question remains, how to choose the optimal threshold? Notice that the best 
 	plt.show()
 
 	---> The best Precision-Recall pair for the Random Forest Model is: Prec =  0.5648854961832062  and Recall =  0.5323741007194245
-![image](Misc/Curve.jpg)
 
-We draw a dot at the point with optimal Precision-Recall pair, (0.56, 0.53). 
 
 We would like to see better Precision and Recall than the above results. For future work, we would consider further hyperparameter tuning (beyond tuning just the threshold parameter). We would also consider more sophisticated methods to handle the class imbalance, such as [downsampling the valid transactions & upweighting the fraudulent ones](https://stats.stackexchange.com/questions/569878/upweight-minority-class-vs-downsampleupweight-majority-class) or the methods in the Python package  [imbalanced-learn](https://imbalanced-learn.org/stable/).
 
