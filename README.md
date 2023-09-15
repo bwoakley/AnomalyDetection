@@ -100,14 +100,14 @@ We now display our results. The best performing model is the Random Forest Class
 
 
 ![image](Misc/PR.jpg)
-<font size= “10”>_**Figure 1**_</font>
+<font size= “20”>_**Figure 1**_</font>
 
 As graphed above in **Figure 1**, we see that as the Threshold value increases, Recall decreases and Precision increases (generally). Increasing the threshold hyperparameter will make the model less sensitive. It will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers (higher Precision), but missing some of the borderline fraud cases (lower Recall).
 
 The question remains, how to choose the optimal threshold? Notice that the best possible Precision/Recall pair is a fictitious model that has 100% Precision and Recall, but it is something to aim for. We plot the values of (Recall, Precision) below in **Figure 2**:
 
 ![image](Misc/Curve.jpg)
-<font size= “10”>_**Figure 2**_</font>
+<font size= “20”>_**Figure 2**_</font>
 
 We draw a dot at the point with optimal (Recall, Precision) pair, (0.56, 0.53). Below, we code a **for loop** that computes the threshold which gives (recall, prec) closest to the point (1,1) :
 
