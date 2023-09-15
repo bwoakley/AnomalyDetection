@@ -36,7 +36,7 @@ On the other hand, we interpret recall as the percentage of all the truly fraudu
 
 In other words, if recall is low, then there are fraudulent transactions that our model is just not able to detect.
 
-This is the **precision/recall tradeoff**. By lowering the threshold hyperparameter, we will have lower precision but higher recall. The model will be more sensitive to outliers. It will detect more cases of fraud, but result in more upset customers. On the other hand, increasing the threshold hyperparameter will make the model less sensitive. It will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers, but missing some of the borderline fraud cases. A model with high AUC ROC and F1 score will capture the optimal solution to this tradeoff problem, resulting in models that have both a high precision and a high recall. We then will then consider the choice of threshold hyperparameter to find a precision/recall combination that we are happy with.
+This is the **precision/recall tradeoff**. By lowering the threshold hyperparameter, we will have lower precision but higher recall. The model will be more sensitive to outliers in the sense that it will detect more cases of fraud, but result in more upset customers. On the other hand, increasing the threshold hyperparameter will make the model less sensitive in the sense that it will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers, but missing some of the borderline fraud cases. A model with high AUC ROC and F1 score will capture the optimal solution to this tradeoff problem, resulting in models that have both a high precision and a high recall. We then will then consider the choice of threshold hyperparameter to find a precision/recall combination that we are happy with.
 
 
 
@@ -102,7 +102,7 @@ We now display our results. The best performing model is the Random Forest Class
 ![image](Misc/PR.jpg)
 <font size= “7”>_**Figure 1**_</font>
 
-As graphed above in **_Figure 1_**, we see that as the Threshold (the x-axis) value increases, Recall decreases and Precision increases (generally). Increasing the threshold hyperparameter will make the model less sensitive. It will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers (higher Precision), but missing some of the borderline fraud cases (lower Recall).
+As graphed above in **_Figure 1_**, we see that as the Threshold (the x-axis) value increases, Recall decreases and Precision increases (generally). Increasing the threshold hyperparameter will make the model less sensitive in the sense that it will ignore the transactions that are somewhat suspicious, resulting in fewer upset customers (higher Precision), but missing some of the borderline fraud cases (lower Recall).
 
 The question remains, how to choose the optimal threshold? Notice that the best possible Precision/Recall pair is a fictitious model that has 100% Precision and Recall, but it is something to aim for. We plot the values of (Recall, Precision) below in **_Figure 2_**:
 
